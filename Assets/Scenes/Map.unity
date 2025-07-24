@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapConfig: {fileID: 11400000, guid: 10fc9b63b6a940c479c450436c3a5eec, type: 2}
+  mapLayout: {fileID: 11400000, guid: ce87adc24fe8f204193c643d3be655f9, type: 2}
   roomPrefab: {fileID: 4747160092697506795, guid: fb1223282e8105641bf6ea7b5e75807d, type: 3}
   linePrefab: {fileID: 2290788788942215165, guid: cdf56330e917e67418c5909f2af6b565, type: 3}
   border: 2

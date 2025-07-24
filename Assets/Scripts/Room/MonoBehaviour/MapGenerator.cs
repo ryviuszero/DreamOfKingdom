@@ -1,10 +1,13 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
 {
     [Header("地图配置")]
     public MapConfigSO mapConfig;
+    [Header("地图布局")]
+    public MapLayoutSO mapLayout;
     [Header("预制体")]
     public Room roomPrefab;
     public LineRenderer linePrefab;
@@ -37,9 +40,21 @@ public class MapGenerator : MonoBehaviour
 
     }
 
-    private void Start()
+    // private void Start()
+    // {
+    //     CreateMap();
+    // }
+
+    private void OnEnable()
     {
-        CreateMap();
+        if (mapLayout.mapRoomDataList.Count > 0)
+        {
+            LoadMap();
+        }
+        else
+        {
+            CreateMap();
+        }
     }
 
     public void CreateMap()
@@ -92,6 +107,8 @@ public class MapGenerator : MonoBehaviour
 
             previousColumnRooms = currentColumnRooms;
         }
+        // 保存地图数据
+        SaveMap();
     }
 
     private void createConnectingLine(List<Room> column1, List<Room> column2)
@@ -158,6 +175,74 @@ public class MapGenerator : MonoBehaviour
 
         return roomType;
 
+    }
+
+    private void SaveMap()
+    {
+        mapLayout.mapRoomDataList = new();
+        mapLayout.linePositionList = new();
+
+        // 房间
+        for (int i = 0; i < rooms.Count; i++)
+        {
+            var room = rooms[i];
+            MapRoomData mapRoomData = new()
+            {
+                posX = room.transform.position.x,
+                posY = room.transform.position.y,
+                column = room.column,
+                line = room.line,
+                roomData = room.roomData,
+                roomState = room.roomState
+            };
+            mapLayout.mapRoomDataList.Add(mapRoomData);
+        }
+
+        // 连线
+        for (int i = 0; i < lines.Count; i++)
+        {
+            var line = lines[i];
+            LinePosition linePosition = new()
+            {
+                startPosition = new SerializeVector3(line.GetPosition(0)),
+                endPosition = new SerializeVector3(line.GetPosition(1))
+            };
+            mapLayout.linePositionList.Add(linePosition);
+        }
+
+    }
+
+    private void LoadMap()
+    {
+        // 读取房间数据
+        for (int i = 0; i < mapLayout.mapRoomDataList.Count; i++)
+        {
+            MapRoomData mapRoomData = mapLayout.mapRoomDataList[i];
+            var newPos = new Vector3(
+                mapRoomData.posX,
+                mapRoomData.posY,
+                0
+            );
+
+            var newRoom = Instantiate(roomPrefab, newPos, Quaternion.identity, transform);
+            newRoom.roomState = mapRoomData.roomState;
+            newRoom.SetupRoom(
+                mapRoomData.column,
+                mapRoomData.line,
+                mapRoomData.roomData
+            );
+            rooms.Add(newRoom);
+        }
+
+        // 读取连线数据
+        for (int i = 0; i < mapLayout.linePositionList.Count; i++)
+        {
+            LinePosition linePosition = mapLayout.linePositionList[i];
+            var line = Instantiate(linePrefab, transform);
+            line.SetPosition(0, linePosition.startPosition.ToVector3());
+            line.SetPosition(1, linePosition.endPosition.ToVector3());
+            lines.Add(line); 
+        }
     }
 }
  

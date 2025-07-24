@@ -1,0 +1,322 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9ccf94354c29743a0f318145099884, type: 3}
+  m_Name: MapLayoutSO
+  m_EditorClassIdentifier: 
+  mapRoomDataList:
+  - posX: -7.649891
+    posY: 2
+    column: 0
+    line: 0
+    roomData: {fileID: 11400000, guid: 9c3ed3717c7ce254b85498f91401faed, type: 2}
+    roomState: 0
+  - posX: -7.649891
+    posY: -2
+    column: 0
+    line: 1
+    roomData: {fileID: 11400000, guid: 9c3ed3717c7ce254b85498f91401faed, type: 2}
+    roomState: 0
+  - posX: -4.726146
+    posY: 3.6
+    column: 1
+    line: 0
+    roomData: {fileID: 11400000, guid: 9c3ed3717c7ce254b85498f91401faed, type: 2}
+    roomState: 0
+  - posX: -4.639493
+    posY: 1.1999998
+    column: 1
+    line: 1
+    roomData: {fileID: 11400000, guid: 9c3ed3717c7ce254b85498f91401faed, type: 2}
+    roomState: 0
+  - posX: -4.499019
+    posY: -1.2000003
+    column: 1
+    line: 2
+    roomData: {fileID: 11400000, guid: 9c3ed3717c7ce254b85498f91401faed, type: 2}
+    roomState: 0
+  - posX: -4.699723
+    posY: -3.6000004
+    column: 1
+    line: 3
+    roomData: {fileID: 11400000, guid: 3b9bc554bc5d47e468ff0aa4bce12175, type: 2}
+    roomState: 0
+  - posX: -2.3196878
+    posY: 3.6
+    column: 2
+    line: 0
+    roomData: {fileID: 11400000, guid: 5746d42f56ecc2642ae083eadc1aaa45, type: 2}
+    roomState: 0
+  - posX: -1.821922
+    posY: 1.1999998
+    column: 2
+    line: 1
+    roomData: {fileID: 11400000, guid: a7f899ceeb1703240afc544d2ec32407, type: 2}
+    roomState: 0
+  - posX: -2.2448628
+    posY: -1.2000003
+    column: 2
+    line: 2
+    roomData: {fileID: 11400000, guid: 5746d42f56ecc2642ae083eadc1aaa45, type: 2}
+    roomState: 0
+  - posX: -2.3772001
+    posY: -3.6000004
+    column: 2
+    line: 3
+    roomData: {fileID: 11400000, guid: a7f899ceeb1703240afc544d2ec32407, type: 2}
+    roomState: 0
+  - posX: 0.6045949
+    posY: 3
+    column: 3
+    line: 0
+    roomData: {fileID: 11400000, guid: 5746d42f56ecc2642ae083eadc1aaa45, type: 2}
+    roomState: 0
+  - posX: 0.9687031
+    posY: 0
+    column: 3
+    line: 1
+    roomData: {fileID: 11400000, guid: 9c3ed3717c7ce254b85498f91401faed, type: 2}
+    roomState: 0
+  - posX: 0.6898772
+    posY: -3
+    column: 3
+    line: 2
+    roomData: {fileID: 11400000, guid: a7f899ceeb1703240afc544d2ec32407, type: 2}
+    roomState: 0
+  - posX: 3.3344784
+    posY: 2
+    column: 4
+    line: 0
+    roomData: {fileID: 11400000, guid: 9c3ed3717c7ce254b85498f91401faed, type: 2}
+    roomState: 0
+  - posX: 3.420872
+    posY: -2
+    column: 4
+    line: 1
+    roomData: {fileID: 11400000, guid: a75cc228693f93f488ba95348ede6818, type: 2}
+    roomState: 0
+  - posX: 6.337336
+    posY: 3
+    column: 5
+    line: 0
+    roomData: {fileID: 11400000, guid: 5746d42f56ecc2642ae083eadc1aaa45, type: 2}
+    roomState: 0
+  - posX: 6.2163687
+    posY: 0
+    column: 5
+    line: 1
+    roomData: {fileID: 11400000, guid: 5746d42f56ecc2642ae083eadc1aaa45, type: 2}
+    roomState: 0
+  - posX: 6.542659
+    posY: -3
+    column: 5
+    line: 2
+    roomData: {fileID: 11400000, guid: 5746d42f56ecc2642ae083eadc1aaa45, type: 2}
+    roomState: 0
+  - posX: 7.649891
+    posY: 0
+    column: 6
+    line: 0
+    roomData: {fileID: 11400000, guid: abfaf6d0f4a4a36488863fd156f2234f, type: 2}
+    roomState: 0
+  linePositionList:
+  - startPosition:
+      x: -7.649891
+      y: 2
+      z: 0
+    endPosition:
+      x: -4.639493
+      y: 1.1999998
+      z: 0
+  - startPosition:
+      x: -7.649891
+      y: -2
+      z: 0
+    endPosition:
+      x: -4.639493
+      y: 1.1999998
+      z: 0
+  - startPosition:
+      x: -4.726146
+      y: 3.6
+      z: 0
+    endPosition:
+      x: -7.649891
+      y: 2
+      z: 0
+  - startPosition:
+      x: -4.499019
+      y: -1.2000003
+      z: 0
+    endPosition:
+      x: -7.649891
+      y: -2
+      z: 0
+  - startPosition:
+      x: -4.699723
+      y: -3.6000004
+      z: 0
+    endPosition:
+      x: -7.649891
+      y: -2
+      z: 0
+  - startPosition:
+      x: -4.726146
+      y: 3.6
+      z: 0
+    endPosition:
+      x: -2.3196878
+      y: 3.6
+      z: 0
+  - startPosition:
+      x: -4.639493
+      y: 1.1999998
+      z: 0
+    endPosition:
+      x: -2.2448628
+      y: -1.2000003
+      z: 0
+  - startPosition:
+      x: -4.499019
+      y: -1.2000003
+      z: 0
+    endPosition:
+      x: -2.2448628
+      y: -1.2000003
+      z: 0
+  - startPosition:
+      x: -4.699723
+      y: -3.6000004
+      z: 0
+    endPosition:
+      x: -2.3196878
+      y: 3.6
+      z: 0
+  - startPosition:
+      x: -1.821922
+      y: 1.1999998
+      z: 0
+    endPosition:
+      x: -4.726146
+      y: 3.6
+      z: 0
+  - startPosition:
+      x: -2.3772001
+      y: -3.6000004
+      z: 0
+    endPosition:
+      x: -4.499019
+      y: -1.2000003
+      z: 0
+  - startPosition:
+      x: -2.3196878
+      y: 3.6
+      z: 0
+    endPosition:
+      x: 0.9687031
+      y: 0
+      z: 0
+  - startPosition:
+      x: -1.821922
+      y: 1.1999998
+      z: 0
+    endPosition:
+      x: 0.6045949
+      y: 3
+      z: 0
+  - startPosition:
+      x: -2.2448628
+      y: -1.2000003
+      z: 0
+    endPosition:
+      x: 0.6898772
+      y: -3
+      z: 0
+  - startPosition:
+      x: -2.3772001
+      y: -3.6000004
+      z: 0
+    endPosition:
+      x: 0.6898772
+      y: -3
+      z: 0
+  - startPosition:
+      x: 0.6045949
+      y: 3
+      z: 0
+    endPosition:
+      x: 3.3344784
+      y: 2
+      z: 0
+  - startPosition:
+      x: 0.9687031
+      y: 0
+      z: 0
+    endPosition:
+      x: 3.420872
+      y: -2
+      z: 0
+  - startPosition:
+      x: 0.6898772
+      y: -3
+      z: 0
+    endPosition:
+      x: 3.420872
+      y: -2
+      z: 0
+  - startPosition:
+      x: 3.3344784
+      y: 2
+      z: 0
+    endPosition:
+      x: 6.542659
+      y: -3
+      z: 0
+  - startPosition:
+      x: 3.420872
+      y: -2
+      z: 0
+    endPosition:
+      x: 6.2163687
+      y: 0
+      z: 0
+  - startPosition:
+      x: 6.337336
+      y: 3
+      z: 0
+    endPosition:
+      x: 3.420872
+      y: -2
+      z: 0
+  - startPosition:
+      x: 6.337336
+      y: 3
+      z: 0
+    endPosition:
+      x: 7.649891
+      y: 0
+      z: 0
+  - startPosition:
+      x: 6.2163687
+      y: 0
+      z: 0
+    endPosition:
+      x: 7.649891
+      y: 0
+      z: 0
+  - startPosition:
+      x: 6.542659
+      y: -3
+      z: 0
+    endPosition:
+      x: 7.649891
+      y: 0
+      z: 0
