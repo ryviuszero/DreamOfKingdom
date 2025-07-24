@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Room : MonoBehaviour
@@ -7,6 +8,7 @@ public class Room : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public RoomDataSO roomData;
     public RoomState roomState;
+    public List<Vector2Int> linkTo = new();
 
     [Header("广播")]
     public ObjectEventSO loadRoomEvent;
@@ -16,14 +18,11 @@ public class Room : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-    void Start()
-    {
-        SetupRoom(0, 0, roomData);
-    }
     private void OnMouseDown()
     {
         Debug.Log("点击了房间：" + roomData.roomType);
-        loadRoomEvent.RaiseEvent(roomData, this);
+        if (roomState == RoomState.Attainable)
+            loadRoomEvent.RaiseEvent(this, this);
     }
 
     // 创建房间传进来
@@ -34,6 +33,14 @@ public class Room : MonoBehaviour
         this.roomData = roomData;
 
         spriteRenderer.sprite = roomData.roomIcon;
+
+        spriteRenderer.color = roomState switch
+        {
+            RoomState.Locked => new Color(0.5f, 0.5f, 0.5f),
+            RoomState.Attainable => new Color(0.5f, 0.8f, 0.5f),
+            RoomState.Visited => Color.white,
+            _ => Color.white
+        };
     }
 
 }
