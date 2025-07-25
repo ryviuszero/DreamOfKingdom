@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea69d41f90c6ea4fa55c27c1d60c145, type: 3}
-  m_Name: AddressableAssetGroupSortSettings
+  m_Script: {fileID: 11500000, guid: c07e3eb3c8e04c64490b02c5a3a57d89, type: 3}
+  m_Name: Attack
   m_EditorClassIdentifier: 
-  sortOrder:
-  - 53ea2a1af60528143ad0090cdf4e3556
-  - cfcbfc78334a7af47b5d7f4e7bfac676
+  cardName: Attack
+  cardImage: {fileID: 21300000, guid: 021ee8796e590fb47a52df407594012a, type: 3}
+  cost: 1
+  cardType: 0
+  description: "\u9020\u6210\u4F24\u5BB3 <color=\"white\">7 </color>\u70B9"

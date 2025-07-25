@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c07e3eb3c8e04c64490b02c5a3a57d89, type: 3}
-  m_Name: defense
+  m_Name: Defense
   m_EditorClassIdentifier: 
   cardName: "\u9632\u5FA1"
   cardImage: {fileID: 21300000, guid: db56b57fa88deb34e8a1b904bd86e96c, type: 3}
