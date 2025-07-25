@@ -5,6 +5,8 @@ public class CardDeck : MonoBehaviour
 {
     public CardManager cardManager;
 
+    public CardLayoutManager cardLayoutManager;
+
     private List<CardDataSO> drawDeck = new(); //抽牌堆
     private List<CardDataSO> discardPile = new(); //弃牌堆
 
@@ -14,6 +16,8 @@ public class CardDeck : MonoBehaviour
     private void Start()
     {
         InitializeDeck();
+
+        DrawCard(3);
     }
 
     public void InitializeDeck()
@@ -51,6 +55,21 @@ public class CardDeck : MonoBehaviour
             // 初始化卡牌对象
             card.Init(currentCardData);
             handCardObjectList.Add(card);
+
+            SetCardLayout();
+        }
+
+    }
+
+    private void SetCardLayout()
+    {
+        for (int i = 0; i < handCardObjectList.Count; i++)
+        {
+            Card currentCard = handCardObjectList[i];
+
+            CardTransform cardTransform = cardLayoutManager.GetCardTransforms(i, handCardObjectList.Count);
+
+            currentCard.transform.SetPositionAndRotation(cardTransform.position, cardTransform.rotation);
         }
     }
 

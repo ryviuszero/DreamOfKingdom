@@ -2,13 +2,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
 
+[DefaultExecutionOrder(-100)]
 public class PoolTool : MonoBehaviour
 {
     public GameObject objPrefab;
 
     private ObjectPool<GameObject> pool;
 
-    private void Start()
+    private void Awake()
     {
         //初始化对象池
         pool = new ObjectPool<GameObject>(
@@ -48,5 +49,5 @@ public class PoolTool : MonoBehaviour
         pool.Release(obj);
     }
 
-    
+
 }
